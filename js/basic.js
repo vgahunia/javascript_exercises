@@ -41,6 +41,12 @@ $(document).ready(function() {
    $('#7').mouseout(function() {
         $('#question').text("")
     })
+   $('#8').hover(function() {
+        $('#question').text("This program checks if a string ends with the given target string.")
+    })
+   $('#8').mouseout(function() {
+        $('#question').text("")
+    })
 
 })
 
@@ -170,5 +176,36 @@ function six() {
 
 function seven() {
 
+}
+
+function eight() {
+    var str = prompt("Provide a sentence");
+    var target = prompt("Provide a string that may or may not be inside the first string.")
+  var x;
+  var x2;
+  if (target.length > 1) {
+     x = str.split(" ");
+     x2 = x.join("");
+     //console.log(x2);
+     var y = target.length;
+     var z = x2.length;
+     var a = z - (y-1);
+      console.log(y, z, a, x2.slice(a-1, z));
+    
+     if (x2.slice(a-1, z) == target) {
+       return true;
+     } else {
+       return false;
+     }
+  } else {
+      x = str.length;
+      console.log(x);
+      if (str[x-1] == target) {
+        console.log(str[x-1]);
+        return true;
+      } else {
+        return false;
+      }
+    }
 }
 
