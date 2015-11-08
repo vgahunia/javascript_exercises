@@ -30,6 +30,9 @@ button {
   cursor: pointer; 
   cursor: hand;
 }
+button:hover {
+  border: 1px solid white;
+}
 
 #answer {
   width: 600px;

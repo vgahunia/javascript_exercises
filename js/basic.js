@@ -42,14 +42,13 @@ $(document).ready(function() {
         $('#question').text("")
     })
    $('#8').hover(function() {
-        $('#question').text("This program checks if a string ends with the given target string.")
+        $('#question').text("This program checks if a string ends with the given target string and returns with true or false.")
     })
    $('#8').mouseout(function() {
         $('#question').text("")
     })
 
 })
-
 
 
 // A program asks the user for a number n and prints the sum of the numbers 1 to n.
@@ -168,7 +167,7 @@ function six() {
             prime = prime + i + ", ";
         }   
     }
-    document.getElementById('answer').innerHTML = "Since you were wondering, all primes up till 1,000 are " + prime;
+    document.getElementById('answer').innerHTML = "Since you were wondering, all primes up to 1,000 are " + prime;
 }
 
 
@@ -177,6 +176,8 @@ function six() {
 function seven() {
 
 }
+
+//This program checks if a string ends with the given target string and returns with true or false.
 
 function eight() {
     var str = prompt("Provide a sentence");
@@ -193,18 +194,18 @@ function eight() {
       console.log(y, z, a, x2.slice(a-1, z));
     
      if (x2.slice(a-1, z) == target) {
-       return true;
+       document.getElementById('answer').innerHTML = "true";
      } else {
-       return false;
+       document.getElementById('answer').innerHTML = "false";;
      }
   } else {
       x = str.length;
       console.log(x);
       if (str[x-1] == target) {
         console.log(str[x-1]);
-        return true;
+        document.getElementById('answer').innerHTML = "true";;
       } else {
-        return false;
+        document.getElementById('answer').innerHTML = "false";;
       }
     }
 }
