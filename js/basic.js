@@ -174,14 +174,32 @@ function six() {
 //A guessing game where you have to guess a secret number. After every guess the program tells you whether your number was too large or too small. At the end, the number of tries needed is printed. It counts only as one try if you input the same number multiple times consecutively.
 
 function seven() {
-
+  document.getElementById('answer').innerHTML = ""
+  var answer = Math.floor(Math.random()*(100 * 1));
+    console.log(answer);
+  var guess= prompt("Pick a number, any number.");
+  var count = 1;
+  for (var i = 0; i < 100; i++) {
+    var x = parseInt(guess);
+    console.log(x);
+    if (x === answer) {
+      break;
+    } else if (x < answer) {
+      guess = prompt("You guessed too low. Guess again.");
+      count++;
+    } else if (x > answer) {
+      guess = prompt("You guess too high. Guess again.");
+      count++;
+    }
+  }
+  document.getElementById('answer').innerHTML = "Amazing guess!!! You answered in " + count + " guesses!"
 }
 
 //This program checks if a string ends with the given target string and returns with true or false.
 
 function eight() {
-    var str = prompt("Provide a sentence");
-    var target = prompt("Provide a string that may or may not be inside the first string.")
+  var str = prompt("Provide a sentence");
+  var target = prompt("Provide a string that may or may not be inside the first string.")
   var x;
   var x2;
   if (target.length > 1) {
