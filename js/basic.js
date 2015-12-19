@@ -177,8 +177,11 @@ function seven() {
   document.getElementById('answer').innerHTML = ""
   var answer = Math.floor(Math.random()*(100 * 1));
     console.log(answer);
-  var guess= prompt("Pick a number, any number.");
+  var guess= prompt("Pick a number, any number from 1  to 100.");
   var count = 1;
+  var guesses = "So for you have guessed: " + guess + " ";
+  console.log(guesses);
+  document.getElementById('answer').innerHTML = guesses;
   for (var i = 0; i < 100; i++) {
     var x = parseInt(guess);
     console.log(x);
@@ -187,10 +190,15 @@ function seven() {
     } else if (x < answer) {
       guess = prompt("You guessed too low. Guess again.");
       count++;
+      guesses += guess + " ";
+      console.log(guesses);
     } else if (x > answer) {
       guess = prompt("You guess too high. Guess again.");
       count++;
+      guesses += guess + " ";
+      console.log(guesses);
     }
+    document.getElementById('answer').innerHTML = guesses;
   }
   document.getElementById('answer').innerHTML = "Amazing guess!!! You answered in " + count + " guesses!"
 }
