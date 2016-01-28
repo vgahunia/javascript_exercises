@@ -1,5 +1,6 @@
 $(document).ready(function() {
-  var quotes = [
+
+    var quotes = [
     {quote: "Do not take life too seriously. You will never get out of it alive.",
      author: "Elbert Hubbard"},
     {quote: "Always remember that you are absolutely unique. Just like everyone else.",
@@ -48,6 +49,10 @@ $(document).ready(function() {
   var randomQuote = '';
   getQuote();
 
+  $('#9').click(function() {
+    $('#quoteMachine').toggle("slide", 500);
+  })
+
   function getQuote() {
     var place = Math.floor(Math.random() * (max));
     quote = quotes[place].quote;
@@ -64,6 +69,8 @@ $(document).ready(function() {
     var quot = 'https://twitter.com/intent/tweet?text=' + '"' + quote + '"  - ' + author;
     console.log(quot);
     $(".twitter").attr("href", quot);
-  }) 
+  })
+
+
 
 })

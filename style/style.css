@@ -85,9 +85,10 @@ h2 {
 
 
 #quoteMachine {
-  background-color: rgb(210, 220, 230);
+  background-color: rgb(15, 25, 35);
   padding: 10px;
   margin: 0 auto;
+  display: none;
 }
 
 .header {
