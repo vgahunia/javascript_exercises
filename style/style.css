@@ -13,15 +13,16 @@ h1:first-child {
 }
 
 .buttons {
-  width: 100%;
+  width: 940px;
   margin: 10px auto;
   text-align: center;
   background-color: rgb(160, 160, 160);
   padding: 10px;
+  padding-right: 0;
 }
 
 button {
-  padding: 10px;
+  padding: 5px;
   background-color: black;
   color: white;
   text-align: center;
@@ -34,12 +35,17 @@ button:hover {
   border: 1px solid white;
 }
 
-#9 {
-  width: 200px;
-}
-
 #answer {
   width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+  font-size: 1.4em;
+  color: white;
+}
+
+#answer1 {
+  width: 800px;
   margin: 0 auto;
   text-align: center;
   padding: 20px;
@@ -71,4 +77,47 @@ hr {
 h2 {
   color: rgb(160, 160, 160);
   margin-bottom: 0;
+}
+
+/*===========================
+------- QUOTE MACHINE ------
+============================ */
+
+
+#quoteMachine {
+  background-color: rgb(210, 220, 230);
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-top: 25px;
+  color: rgb(160, 10, 70);
+  text-align: center;
+}
+
+.header button {
+  font-size: 1.2em;
+  color: rgb(210, 220, 230);
+  background-color: rgb(160, 10, 70);
+  cursor: pointer;
+  margin-bottom: 30px;
+  width: 250px;
+}
+
+.tweet {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.quote {
+  text-align: center;
+  font-size: 1.5em;
+  color: white;
+}
+
+.author {
+  text-align:center;
+  margin-top: 10px;
+  font-size: 1.1em;
 }

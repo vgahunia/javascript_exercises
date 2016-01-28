@@ -47,6 +47,18 @@ $(document).ready(function() {
    $('#8').mouseout(function() {
         $('#question').text("")
     })
+   $('#9').hover(function() {
+        $('#question').text("This link brings up a random quote machine and you can tweet the quote if you'd like.")
+    })
+   $('#9').mouseout(function() {
+        $('#question').text("")
+    })
+   $('#10').hover(function() {
+        $('#question').text("A Javascript calculator - COMING SOON.")
+    })
+   $('#10').mouseout(function() {
+        $('#question').text("")
+    })
 
 })
 
