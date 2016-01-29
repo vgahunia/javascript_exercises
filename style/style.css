@@ -93,8 +93,11 @@ h2 {
 
 .header {
   margin-top: 25px;
-  color: rgb(160, 10, 70);
   text-align: center;
+}
+
+.header h1 {
+  color: rgb(210, 220, 230);
 }
 
 .header button {
@@ -103,7 +106,8 @@ h2 {
   background-color: rgb(160, 10, 70);
   cursor: pointer;
   margin-bottom: 30px;
-  width: 250px;
+  width: 280px;
+  padding: 4px;
 }
 
 .tweet {
