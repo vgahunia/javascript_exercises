@@ -126,3 +126,19 @@ h2 {
   margin-top: 10px;
   font-size: 1.1em;
 }
+
+/* ========================
+-------- Calculator --------
+======================= */
+
+#body {
+  background-color: white;
+}
+
+#calc_answer {
+  padding: 5px;
+  width: 200px;
+  margin: 10px auto;
+  height: 40px;
+  background-color: rgb(220, 200, 180);
+}
