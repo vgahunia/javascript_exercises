@@ -1,93 +1,128 @@
 <!doctype html>
 <html>
-  <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Javascript Exercises</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Javascript Exercises</title>
 
-			<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-      <link href="style/style.css" rel='stylesheet' type=
-      'text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+  <link href="style/style.css" rel='stylesheet' type=
+  'text/css'>
 
-       <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js">
-      </script>
-      <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-      <script type="text/javascript" src="js/basic.js">
-      </script>
-      <script type="text/javascript" src="js/quote.js">
-      </script>
-       <script type="text/javascript" src="js/calc.js">
-      </script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js">
+  </script>
+  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <script type="text/javascript" src="js/basic.js">
+  </script>
+  <script type="text/javascript" src="js/quote.js">
+  </script>
+  <script type="text/javascript" src="js/calc.js">
+  </script>
 
-  </head>
+</head>
 
-  <body>
-  	<h1>Javascript Exercises from Basic to Intermediate</h1>
-  	<div class="buttons">
-      <button id="1" onclick="one()">Sum 1</button>
-      <button id="2" onclick="two()">Sum 2</button>
-      <button id="3" onclick="three()">Palindrome</button>
-      <button id="4" onclick="four()">Pick +||*</button>
-      <button id="5" onclick="five()">Mult. Table</button>
-      <button id="6" onclick="six()">Prime</button>
-      <button id="7" onclick="seven()">GuessGame</button>
-      <button id="8" onclick="eight()">Ending</button>
+<body>
+ <h1>Javascript Exercises from Basic to Intermediate</h1>
+ <div class="buttons">
+  <button id="1" onclick="one()">Sum 1</button>
+  <button id="2" onclick="two()">Sum 2</button>
+  <button id="3" onclick="three()">Palindrome</button>
+  <button id="4" onclick="four()">Pick +||*</button>
+  <button id="5" onclick="five()">Mult. Table</button>
+  <button id="6" onclick="six()">Prime</button>
+  <button id="7" onclick="seven()">GuessGame</button>
+  <button id="8" onclick="eight()">Ending</button>
+</div>
+<div class="buttons">
+  <button id="9">Quote Machine</button>
+  <button id="10">Calculator</button>
+</div>
+
+<div id="q-area">
+  <h2>EXERCISE:  </h2>
+  <p id="question"></p>
+</div>
+
+<hr />
+<hr />
+
+<h2>SOLUTION:  </h2>
+<div id="answer">
+
+</div>
+
+<div id="answer1">
+  <div id="quoteMachine">
+    <div class="header">
+      <h1>Random Quote Machine</h1>
+      <button>Gimme a Quote!</button>
     </div>
-    <div class="buttons">
-      <button id="9">Quote Machine</button>
-      <button id="10">Calculator</button>
+
+    <div class="quotation">
+      <div class="quote"></div>
+      <div class="author"></div>
+    </div>
+    <div class="tweet">
+      <a class="twitter" href="https://twitter.com/intent/tweet" target="blank">
+        <button>Tweet</button>
+      </a>
     </div>
 
-     <div id="q-area">
-     	<h2>EXERCISE:  </h2>
-     	<p id="question"></p>
-     </div>
+    <script>
+    window.twttr = (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+      t = window.twttr || {};
+      if (d.getElementById(id)) return t;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js, fjs);
 
-     <hr />
-     <hr />
+      t._e = [];
+      t.ready = function(f) {
+        t._e.push(f);
+      };
 
-     <h2>SOLUTION:  </h2>
-     <div id="answer">
+      return t;
+    }(document, "script", "twitter-wjs"));
+    </script>
 
-     </div>
+    <h1>Calculator</h1>
 
-     <div id="answer1">
-      <div id="quoteMachine">
-        <div class="header">
-          <h1>Random Quote Machine</h1>
-          <button>Gimme a Quote!</button>
-        </div>
-
-        <div class="quotation">
-          <div class="quote"></div>
-          <div class="author"></div>
-        </div>
-        <div class="tweet">
-          <a class="twitter" href="https://twitter.com/intent/tweet" target="blank">
-            <button>Tweet</button>
-          </a>
-        </div>
-
-        <script>
-        window.twttr = (function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0],
-          t = window.twttr || {};
-          if (d.getElementById(id)) return t;
-          js = d.createElement(s);
-          js.id = id;
-          js.src = "https://platform.twitter.com/widgets.js";
-          fjs.parentNode.insertBefore(js, fjs);
-
-          t._e = [];
-          t.ready = function(f) {
-            t._e.push(f);
-          };
-
-          return t;
-        }(document, "script", "twitter-wjs"));
-        </script>
+  </div>
+  <div id="calculator">
+      <div id="calc_answer">
       </div>
-    </div>
+      <div>
+        <button class="digit" id="one">1</button>
+        <button class="digit" id="two">2</button>
+        <button class="digit" id="three">3</button>
+        <button id="equal">=</button>
+      </div>
 
-  </body>
+      <div>
+        <button class="digit" id="four">4</button>
+        <button class="digit" id="five">5</button>
+        <button class="digit" id="six">6</button>
+        <button id="clear">C</button>
+      </div>
+
+      <div>
+        <button class="digit" id="seven">7</button>
+        <button class="digit" id="eight">8</button>
+        <button class="digit" id="nine">9</button>
+        <button class="digit" id="zero">0</button>
+      </div>
+
+      <div>
+        <button class="op" id="plus">+</button>
+        <button class="op" id="minus">-</button>
+        <button class="op" id="multiply">x</button>
+        <button class="op" id="divide">/</button>
+      </div>
+
+    </div>
+</div>
+
+</body>
 </html>

@@ -2,7 +2,7 @@
 $(document).ready(function() {
 
 	$('#10').click(function() {
-		$("#answer").load("ajax/calc.html");
+		$("#calculator").toggle("slide", 500);
 	})
 
 	var equation = "";

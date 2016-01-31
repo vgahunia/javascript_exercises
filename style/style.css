@@ -131,8 +131,9 @@ h2 {
 -------- Calculator --------
 ======================= */
 
-#body {
+#calculator {
   background-color: white;
+  display: none;
 }
 
 #calc_answer {
