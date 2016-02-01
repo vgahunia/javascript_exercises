@@ -16,6 +16,16 @@ $(document).ready(function() {
 		equation += $(this).text();
 		$('#calc_answer').html(equation);
 	})
+
+	$('#clear').click(function(){
+		equation = "";
+		$('#calc_answer').html(equation);
+	})
 	
+	$('#equal').click(function() {
+		console.log(equation);
+		var x = eval(equation);
+		$('#calc_answer').html(x);
+	})
 })
 
