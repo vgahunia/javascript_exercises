@@ -61,7 +61,7 @@ $(document).ready(function() {
     $('.author').text("- " + author);
   }
 
-  $('button').click(function() {
+  $('.header button').click(function() {
     getQuote();
   })
   
